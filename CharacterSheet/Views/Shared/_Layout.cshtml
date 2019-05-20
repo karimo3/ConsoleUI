@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Programming in C#! Exam 70-483 Study Guide!</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .dropdown:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown > .dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+
+        #sidebar {
+            height: 100%;
+            overflow: auto;
+            width: 30%;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <ul class="nav nav-pills justify-content-center"> 
+        <li class="nav-item">
+            <a class="nav-link active" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact Us</a>
+        </li>
+        @*Manage Program Flow*@
+        <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage Program Flow</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" asp-controller="Home" asp-action="ImplementMultithreading">Implement Multithreading and Asynchronous Processing</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ManageMultithreading">Manage Multithreading</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ProgramFlow">Implement Program Flow</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="EventsAndCallbacks">Create and Implement Events and Callbacks</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ExceptionHandling">Implement Exception Handling</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </li>
+        @*Create and Use Types*@
+        <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Create and Use Types</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" asp-controller="Home" asp-action="CreateTypes">Create Types</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ConsumeTypes">Consume Types</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="EnforceEncapsulation">Enforce Encapsulation</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="CreateAndImplementClassHierarchy">Create and Implement a Class Hierarchy</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="Reflection">Find, Execute, and Create Types at Runtime by Using Reflection</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ManageObjectLifeCycle">Manage the Object Life Cycle</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ManipulateStrings">Manipulate Strings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </li>
+        @*Debug Applications and Implement Security*@
+        <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Debug Applications and Implement Security</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" asp-controller="Home" asp-action="ValidateAppInput">Validate Application Input</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="SymmetricEncryption">Perform Symmetric and Asymmetric Encryption</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ManageAssemblies">Manage Assemblies</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="DebugApplication">Debug an Application</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ImplementDiagnostics">Implement Diagnostics in an Application</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </li>
+        @*Implement Data Access*@
+        <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Implement Data Access</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" asp-controller="Home" asp-action="IOOperations">Perform I/O Operations</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="ConsumeData">Consume Data</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="LINQData">Query and Manipulate Data and Objects by Using LINQ</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="SerializeData">Serialize and Deserialize Data</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="StoreRetrieveData">Store Data in and Retrieve Data from Collections</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </li>
+    </ul>
+
+    <section class="container">
+        @RenderBody()
+    </section>
+
+    <footer class="container">
+        <div class="text-center">Copyright &#169 2019 Essential Programming LLC</div>
+    </footer>
+
+
+    @RenderSection("scripts", false)
+</body>
+</html>
