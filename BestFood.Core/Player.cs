@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Restaurants.Core
 {
     public class Player
     {
-        public int Id;
-
-
+        public int Id { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public int Age { get; set; }
+        [Required]
+        public string Position { get; set; }
 
     }
 }
